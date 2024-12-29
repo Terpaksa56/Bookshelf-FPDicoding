@@ -1,0 +1,287 @@
+/* Styling body */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('stacked-waves-haikei.svg'); /* Pastikan gambar sesuai dengan path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+  }
+  .tambah-buku{
+    margin-bottom: 40px;
+  }
+  header h1{
+    color: white;
+  }
+  
+  /* Styling container utama */
+  .bookshelf-app {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  /* Styling header */
+  .bookshelf-app h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Input */
+  .form-group {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  .floating-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+  }
+  
+  .form-group input:focus + .floating-label,
+  .form-group input:not(:placeholder-shown) + .floating-label {
+    transform: translateY(-25px);
+    font-size: 12px;
+    opacity: 1;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6C63FF;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .form-group input:focus + .highlight,
+  .form-group input:not(:placeholder-shown) + .highlight {
+    transform: scaleX(1);
+  }
+  
+  /* Tombol */
+  button {
+    margin: 10px auto;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+    background-color: #3A4750;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: all 0.15s ease-in;
+  }
+  
+  button:hover {
+    opacity: 0.7;
+    background-color: #829fb4;
+    color: black;
+  }
+
+  .button-rak{
+    align-items: center;
+    margin-left: 40px;
+  }
+  
+  /* Rak Buku */
+  .bookshelf {
+    margin-top: 20px;
+  }
+  
+  .bookshelf h2 {
+    text-align: left;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  
+  .book-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-item .book-info {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .book-item .book-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .book-item .book-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .book-item .actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .book-item .actions .button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .form-group label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #333;
+    cursor: pointer; /* Pointer berubah menjadi tangan saat hover */
+  }
+
+  .form-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    cursor: pointer; /* Pointer berubah menjadi tangan saat hover */
+  }
+  
+  .form-group input[type="checkbox"]:checked {
+    background-color: #6C63FF; /* Warna checkbox saat dicentang */
+    border-color: #6C63FF;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="white"%3E%3Cpath d="M13.78 3.72a.75.75 0 10-1.06-1.06l-7.72 7.72-2.72-2.72a.75.75 0 00-1.06 1.06l3.25 3.25c.3.3.77.3 1.06 0l8.25-8.25z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .form-group input[type="checkbox"]:hover {
+    background-color: #ddd; /* Warna saat hover */
+    border-color: #aaa;
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    /* Body */
+    body {
+      padding: 10px;
+      align-items: stretch;
+    }
+  
+    /* Container Utama */
+    .bookshelf-app {
+      max-width: 100%;
+      padding: 15px;
+      box-shadow: none; /* Hilangkan bayangan pada layar kecil */
+    }
+  
+    /* Header */
+    .bookshelf-app h1 {
+      font-size: 20px; /* Kurangi ukuran font */
+    }
+
+    header h1{
+      text-align: center;
+    }
+  
+    /* Form Group */
+    .form-group {
+      margin-bottom: 20px;
+    }
+  
+    .form-group label {
+      font-size: 14px; /* Ukuran teks lebih kecil */
+    }
+  
+    .form-group input {
+      padding: 8px; /* Kurangi padding */
+      font-size: 14px;
+    }
+  
+    /* Tombol */
+    button {
+      font-size: 14px;
+      padding: 0.6rem 2rem;
+    }
+  
+    .button-rak {
+      margin-left: 0; /* Sesuaikan agar tombol tetap rapi */
+      width: 100%; /* Tombol memenuhi lebar container */
+      text-align: center;
+    }
+  
+    /* Rak Buku */
+    .bookshelf h2 {
+      font-size: 16px;
+    }
+  
+    .book-item {
+      flex-direction: column; /* Atur elemen secara vertikal */
+      align-items: flex-start; /* Rata kiri */
+      gap: 10px; /* Jarak antar elemen */
+    }
+  
+    .book-item .book-info h3 {
+      font-size: 14px;
+    }
+  
+    .book-item .book-info p {
+      font-size: 12px;
+    }
+  
+    .book-item .actions {
+      width: 100%;
+      justify-content: space-around; /* Elemen tombol rata */
+    }
+  
+    .book-item .actions .button {
+      font-size: 10px;
+      padding: 5px 8px;
+    }
+  
+    /* Checkbox */
+    .form-group input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  
